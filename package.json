@@ -1,0 +1,44 @@
+{
+  "name": "expo-simple-auth",
+  "version": "0.0.0",
+  "description": "An easy to use, OAuth 2.0 and OpenID Connect (OIDC) authentication library built on top of Expo",
+  "keywords": [
+    "react",
+    "react-native",
+    "expo",
+    "auth",
+    "authentication",
+    "oauth",
+    "openid",
+    "connect",
+    "oidc",
+    "jwt"
+  ],
+  "author": "Wolfleader101",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "scripts": {
+    "build": "tsup",
+    "release": "changeset",
+    "ci:publish": "pnpm build && changeset publish --access public"
+  },
+  "publishConfig": {
+    "provenance": true,
+    "access": "public"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}

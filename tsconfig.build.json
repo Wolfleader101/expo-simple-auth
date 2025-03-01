@@ -2,6 +2,10 @@
   "compilerOptions": {
     /* Base Options: */
     "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "es2022",
